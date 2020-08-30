@@ -1,11 +1,12 @@
 {
-  "name": "CNR",
+  "name": "cnr",
   "version": "0.0.1",
   "scripts": {
     "dev": "next",
     "build": "next build",
     "start": "next start",
-    "type-check": "tsc"
+    "type-check": "tsc",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
   },
   "dependencies": {
     "contentful": "^7.14.6",
@@ -17,7 +18,14 @@
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@typescript-eslint/eslint-plugin": "^3.7.0",
+    "@typescript-eslint/parser": "^3.7.0",
+    "eslint": "^7.5.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-react": "^7.20.3",
+    "prettier": "^2.0.5",
     "typescript": "3.9.7"
   },
-  "license": "ISC"
+  "license": "ISC",
 }

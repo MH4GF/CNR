@@ -1,0 +1,44 @@
+// https://qiita.com/matkatsu8/items/f0a592f713e68a8d95b7
+{
+  "settings": {
+    "react": {
+      "version": "detect"
+    }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:react/recommended",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint"
+  ],
+  "plugins": ["@typescript-eslint", "react"],
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "node": true,
+    "es6": true
+  },
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaFeatures": {
+      "jsx": true
+    }
+  },
+  "rules": {
+    "@typescript-eslint/naming-convention": [
+      "error",
+      {
+        "selector": "class",
+        "format": ["PascalCase"],
+        "custom": {
+          "regex": "send|start|find",
+          "match": false
+        }
+      }
+    ],
+    "@typescript-eslint/no-empty-function": 0,
+    "eqeqeq": "error"
+  }
+}

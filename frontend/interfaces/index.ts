@@ -5,9 +5,9 @@
 // import User from 'path/to/interfaces';
 
 export type Post = Readonly<{
-  alt: string,
-  date: string,
-  image: string,
-  title: string,
-  url: string,
+  alt: string;
+  date: string;
+  image: string;
+  title: string;
+  url: string;
 }>;

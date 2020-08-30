@@ -1,26 +1,28 @@
-import React from 'react'
+import React from "react";
 import { GetStaticProps } from "next";
 import PostList from "../components/PostList";
-import {Post} from "../interfaces";
+import { Post } from "../interfaces";
 import Layout from "../components/Layout";
-import ContentfulClient from "../utils/ContentfulClient"
+import ContentfulClient from "../utils/ContentfulClient";
 
 type Props = {
-  items: Post[]
-}
+  items: Post[];
+};
 
-const HomePage = ({ items }: Props) => {
+const HomePage = ({ items }: Props): React.ReactElement => {
   return (
     <Layout>
-      <PostList items={items}/>
+      <PostList items={items} />
     </Layout>
-  )
-}
+  );
+};
 
-export const getStaticProps:GetStaticProps = async () => {
-  const entries = await ContentfulClient.getEntries<Post>()
-  const items: Post[] = entries.items.map((entry) => { return entry.fields } )
-  return { props: { items: items } }
-}
+export const getStaticProps: GetStaticProps = async () => {
+  const entries = await ContentfulClient.getEntries<Post>();
+  const items: Post[] = entries.items.map((entry) => {
+    return entry.fields;
+  });
+  return { props: { items: items } };
+};
 
-export default HomePage
+export default HomePage;
