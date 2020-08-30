@@ -8,16 +8,22 @@ import { Sys } from "contentful";
 
 export type Post = Readonly<{
   sys: Sys;
-  fields: Fields;
+  fields: PostFields;
 }>;
 
-export type Fields = Readonly<{
+export type PostFields = Readonly<{
   title: string;
+  headerImage: HeaderImage;
   body: string;
   slug: string;
 }>;
 
 export type HeaderImage = Readonly<{
+  sys: Sys;
+  fields: HeaderImageFields;
+}>;
+
+export type HeaderImageFields = Readonly<{
   title: string;
   file: File;
 }>;

@@ -22,11 +22,7 @@ const Item = ({ item, errors }: Props) => {
   }
 
   return (
-    <Layout
-      title={`${
-        item ? item.fields.title : "Post Detail"
-      } | Next.js + TypeScript Example`}
-    >
+    <Layout title={`${item ? item.fields.title : "Post Detail"} | CNR`}>
       {item && <PostDetail item={item} />}
     </Layout>
   );

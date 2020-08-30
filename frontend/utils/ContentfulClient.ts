@@ -1,5 +1,5 @@
 import { Asset, ContentfulClientApi, createClient } from "contentful";
-import { Fields, Post } from "../interfaces";
+import { PostFields, Post } from "../interfaces";
 
 interface IContentfulClient {
   GetPosts: (query?: any) => Promise<Post[]>;
@@ -17,11 +17,9 @@ export default class ContentfulClient implements IContentfulClient {
   }
 
   async GetPosts(query?: any): Promise<Post[]> {
-    const entries = await this.client.getEntries<Fields>(query);
+    const entries = await this.client.getEntries<PostFields>(query);
 
-    return entries.items.map((entry) => {
-      return { sys: entry.sys, fields: entry.fields };
-    });
+    return entries.items;
   }
 
   async GetAsset(id: string): Promise<Asset> {
