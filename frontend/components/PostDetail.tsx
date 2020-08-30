@@ -6,8 +6,9 @@ type Props = {
   item: Post;
 };
 
-const ListDetail = ({ item: post }: Props) => {
+const PostDetail = ({ item: post }: Props) => {
   const imgSrc: string = "https:" + post.fields.headerImage.fields.file.url;
+
   return (
     <div>
       <h1>Detail for {post.fields.title}</h1>
@@ -16,4 +17,4 @@ const ListDetail = ({ item: post }: Props) => {
   );
 };
 
-export default ListDetail;
+export default PostDetail;
