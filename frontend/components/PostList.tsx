@@ -10,7 +10,7 @@ const PostList = ({ items }: Props): React.ReactElement => {
   return (
     <ul>
       {items.map((item) => (
-        <li key={item.title}>
+        <li key={item.fields.title}>
           <PostListItem data={item} />
         </li>
       ))}

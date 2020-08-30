@@ -4,10 +4,24 @@
 //
 // import User from 'path/to/interfaces';
 
+import { Sys } from "contentful";
+
 export type Post = Readonly<{
-  alt: string;
-  date: string;
-  image: string;
+  sys: Sys;
+  fields: Fields;
+}>;
+
+export type Fields = Readonly<{
   title: string;
+  body: string;
+  slug: string;
+}>;
+
+export type HeaderImage = Readonly<{
+  title: string;
+  file: File;
+}>;
+
+export type File = Readonly<{
   url: string;
 }>;

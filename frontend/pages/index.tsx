@@ -18,10 +18,7 @@ const HomePage = ({ items }: Props): React.ReactElement => {
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const entries = await ContentfulClient.getEntries<Post>();
-  const items: Post[] = entries.items.map((entry) => {
-    return entry.fields;
-  });
+  const items = await new ContentfulClient().GetPosts();
   return { props: { items: items } };
 };
 
