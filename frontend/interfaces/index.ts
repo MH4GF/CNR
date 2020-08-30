@@ -5,6 +5,7 @@
 // import User from 'path/to/interfaces';
 
 import { Sys } from "contentful";
+import { Document } from "@contentful/rich-text-types";
 
 export type Post = Readonly<{
   sys: Sys;
@@ -14,7 +15,7 @@ export type Post = Readonly<{
 export type PostFields = Readonly<{
   title: string;
   headerImage: HeaderImage;
-  body: string;
+  body: Document;
   slug: string;
 }>;
 
