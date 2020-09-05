@@ -6,26 +6,38 @@
     "build": "next build",
     "start": "next start",
     "type-check": "tsc",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "sb": "start-storybook -p 6006 -c .storybook -s ./public",
+    "sb:build": "build-storybook"
   },
   "dependencies": {
     "@contentful/rich-text-react-renderer": "^14.1.1",
     "contentful": "^7.14.6",
     "next": "latest",
     "react": "^16.12.0",
-    "react-dom": "^16.12.0"
+    "react-dom": "^16.12.0",
+    "styled-components": "^5.1.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.11.4",
+    "@storybook/addon-essentials": "^6.0.21",
+    "@storybook/preset-typescript": "^3.0.0",
+    "@storybook/react": "^6.0.21",
     "@types/node": "^12.12.21",
     "@types/react": "^16.9.16",
     "@types/react-dom": "^16.9.4",
+    "@types/storybook__react": "^5.2.1",
+    "@types/styled-components": "^5.1.2",
     "@typescript-eslint/eslint-plugin": "^3.7.0",
     "@typescript-eslint/parser": "^3.7.0",
+    "babel-loader": "^8.1.0",
+    "babel-preset-react-app": "^9.1.2",
     "eslint": "^7.5.0",
     "eslint-config-prettier": "^6.11.0",
     "eslint-plugin-prettier": "^3.1.4",
     "eslint-plugin-react": "^7.20.3",
     "prettier": "^2.0.5",
+    "ts-loader": "^8.0.3",
     "typescript": "3.9.7"
   },
   "license": "ISC",
