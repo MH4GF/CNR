@@ -9,8 +9,11 @@ type Props = {
 };
 
 const Img = styled.img`
-  max-width: 100vw;
-`
+  max-width: 80vw;
+  position: relative;
+  left: 50%;
+  margin-left: -40vw;
+`;
 
 const PostDetail = ({ item: post }: Props) => {
   const imgSrc: string = "https:" + post.fields.headerImage.fields.file.url;
@@ -18,10 +21,7 @@ const PostDetail = ({ item: post }: Props) => {
   return (
     <div>
       <h1>Detail for {post.fields.title}</h1>
-      <Img
-        alt={post.fields.headerImage.fields.title}
-        src={imgSrc}
-      />
+      <Img alt={post.fields.headerImage.fields.title} src={imgSrc} />
       {documentToReactComponents(post.fields.body)}
     </div>
   );
