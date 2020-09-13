@@ -1,5 +1,5 @@
 import * as React from "react";
-import PostListItem from "./PostListItem";
+import PostListItem from "./Post/List/Item";
 import { Post } from "../interfaces";
 
 type Props = {

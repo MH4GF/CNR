@@ -3,6 +3,7 @@ import * as React from "react";
 import { Post } from "../interfaces";
 import { documentToReactComponents } from "@contentful/rich-text-react-renderer";
 import styled from "styled-components";
+import Title from "./Post/Title";
 
 type Props = {
   item: Post;
@@ -20,8 +21,12 @@ const PostDetail = ({ item: post }: Props) => {
 
   return (
     <div>
-      <h1>Detail for {post.fields.title}</h1>
       <Img alt={post.fields.headerImage.fields.title} src={imgSrc} />
+      <Title
+        title={post.fields.title}
+        href="/posts/[id]"
+        as={`/posts/${post.fields.slug}`}
+      />
       {documentToReactComponents(post.fields.body)}
     </div>
   );
