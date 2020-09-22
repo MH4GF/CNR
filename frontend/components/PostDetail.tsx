@@ -9,6 +9,7 @@ import { BLOCKS, Node } from "@contentful/rich-text-types";
 import styled from "styled-components";
 import Title from "./Post/Title";
 import { ReactNode } from "react";
+import media from "styled-media-query";
 
 type Props = {
   item: Post;
@@ -25,6 +26,11 @@ const Img = styled.img`
   margin-left: -40vw;
   margin-top: 2rem;
   margin-bottom: 2rem;
+
+  ${media.lessThan("medium")`
+    max-width: 100vw;
+    margin-left: -50vw;
+  `}
 `;
 
 const Heading1 = styled.h1`

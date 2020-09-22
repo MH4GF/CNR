@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import Link from "next/link";
+import media from "styled-media-query";
 
 const Text = styled.a`
   font-weight: bold;
@@ -9,6 +10,10 @@ const Text = styled.a`
   cursor: pointer;
   margin: 2rem 0 1rem;
   display: block;
+
+  ${media.lessThan("medium")`
+    font-size: 24px;
+  `}
 `;
 
 const DateSub = styled.a`
@@ -17,6 +22,10 @@ const DateSub = styled.a`
   text-decoration: none;
   cursor: pointer;
   display: block;
+
+  ${media.lessThan("medium")`
+    font-size: 12px;
+  `}
 `;
 
 const Container = styled.div`
