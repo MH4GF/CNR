@@ -13,6 +13,7 @@ const PostListItem = ({ data }: Props): React.ReactElement => {
       title={data.fields.title}
       href="/posts/[id]"
       as={`/posts/${data.fields.slug}`}
+      date={data.sys.createdAt}
     />
   );
 };

@@ -26,6 +26,7 @@ const PostDetail = ({ item: post }: Props) => {
         title={post.fields.title}
         href="/posts/[id]"
         as={`/posts/${post.fields.slug}`}
+        date={post.sys.createdAt}
       />
       {documentToReactComponents(post.fields.body)}
     </div>
